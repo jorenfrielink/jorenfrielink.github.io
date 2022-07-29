@@ -123,60 +123,6 @@
         getCounter();
     });
 
-    var target = [{
-        "month": "januari",
-        "target": 1000,
-        "sumTarget": 1000
-    }, {
-        "month": "februari",
-        "target": 3000,
-        "sumTarget": 4000
-    }, {
-        "month": "maart",
-        "target": 7000,
-        "sumTarget": 11000
-    }, {
-        "month": "april",
-        "target": 13000,
-        "sumTarget": 24000
-    }, {
-        "month": "mei",
-        "target": 11875,
-        "sumTarget": 35875,
-        "sumActivations": 37728
-    }, {
-        "month": "juni",
-        "target": 10750,
-        "sumTarget": 46625,
-        "sumActivations": 47762
-    }, {
-        "month": "juli",
-        "target": 12375,
-        "sumTarget": 59000
-    }, {
-        "month": "augustus",
-        "target": 14875,
-        "sumTarget": 73875
-    }, {
-        "month": "september",
-        "target": 10875,
-        "sumTarget": 84750
-    }, {
-        "month": "oktober",
-        "target": 10875,
-        "sumTarget": 95625
-    }, {
-        "month": "november",
-        "target": 8000,
-        "sumTarget": 103625
-    }, {
-        "month": "december",
-        "target": 8875,
-        "sumTarget": 112500
-    }, {}]
-
-    
-
     setInterval(getCounter, 60000)
 
     function getCounter() {
@@ -187,6 +133,16 @@
             dataType: 'json',
             success: function(json) {
                 activations = json.number;
+            }
+        });
+
+        var target = [];
+        $.ajax({
+            url: 'https://jorenfrielink.github.io/citycard/data.json',
+            async: false,
+            dataType: 'json',
+            success: function(json) {
+                target = json;
             }
         });
 
