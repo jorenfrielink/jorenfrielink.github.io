@@ -138,11 +138,12 @@
 
         var target = [];
         $.ajax({
-            url: 'https://jorenfrielink.github.io/citycard/data.json',
+            url: 'https://raw.githubusercontent.com/jorenfrielink/jorenfrielink.github.io/main/citycard/data.json',
             async: false,
             dataType: 'json',
             success: function(json) {
-                target = json;
+                console.log(json);
+                target = json.target;
             }
         });
 

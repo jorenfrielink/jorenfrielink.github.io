@@ -1,4 +1,4 @@
-"target": [[{
+{"target": [{
         "month": "januari",
         "target": 1000,
         "sumTarget": 1000
@@ -48,4 +48,4 @@
         "month": "december",
         "target": 8875,
         "sumTarget": 112500
-    }, {}]
+    }]}
