@@ -27,7 +27,8 @@
     }, {
         "month": "juli",
         "target": 12375,
-        "sumTarget": 59000
+        "sumTarget": 59000,
+        "sumActivations": 57902
     }, {
         "month": "augustus",
         "target": 14875,
