@@ -130,6 +130,7 @@
         $.ajax({
             url: 'https://portal.cardapi.io/pages/counter.json',
             async: false,
+            cache: false,
             dataType: 'json',
             success: function(json) {
                 activations = json.number;
@@ -140,6 +141,7 @@
         $.ajax({
             url: 'https://jorenfrielink.github.io/citycard/data.json',
             async: false,
+            cache: false,
             dataType: 'json',
             success: function(json) {
                 target = json.target;
