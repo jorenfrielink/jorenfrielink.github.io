@@ -1,0 +1,74 @@
+@font-face {
+        font-family: Avenir;
+        font-style: normal;
+        font-weight: 400;
+        src: url('https://www.iamsterdam.com/Assets/fonts/avenir/Book.eot?v=E0F4988F3257EC6DEA10ADD7B786C656') format("eot"), url('https://www.iamsterdam.com/Assets/fonts/avenir/Book.woff') format("woff"), url('https://www.iamsterdam.com/Assets/fonts/avenir/Book.ttf') format("truetype"), url('https://www.iamsterdam.com/Assets/fonts/avenir/Book.svg') format("svg")
+    }
+
+    @font-face {
+        font-family: Avenir;
+        font-style: normal;
+        font-weight: 800;
+        src: url('https://www.iamsterdam.com//Assets/fonts/avenir/Heavy.eot?'') format("eot"), url(https://www.iamsterdam.com//Assets/fonts/avenir/Heavy.woff') format("woff"), url('https://www.iamsterdam.com//Assets/fonts/avenir/Heavy.ttf') format("truetype"), url('https://www.iamsterdam.com//Assets/fonts/avenir/Heavy.svg') format("svg")
+    }
+
+    html,
+    body {
+        background-color: #ffffff;
+        font-family: avenir;
+        margin: 0;
+        padding: 0;
+    }
+
+    .label {
+        width: 200px;
+        height: auto;
+        margin-left: 30px;
+    }
+
+    .wrap, .wrap2 {
+        float:  left;
+        margin: 200px 100px;
+        text-align: center;
+    }
+
+    .wrap2 {
+        float:  right;
+    }
+
+    #progress-circle, #progress-circle2 {
+        background: radial-gradient(white 66%, transparent 51%),
+            conic-gradient(transparent 0deg 320deg, #f7f7f7 320deg 360deg),
+            conic-gradient(rgb(24, 175, 117,0.3) 0deg, #18af75);
+        border-radius: 50%;
+        width: 600px;
+        height: 600px;
+        transition: all 500ms ease-in;
+        will-change: transform;
+    }
+
+    .content {
+        padding: 215px 0;
+    }
+
+    .content>div {
+        padding: 2px 0;
+    }
+
+    #counter, #counter2 {
+        font-size: 100px;
+        color: #fd000d;
+    }
+
+    #counter2 {
+        color: #007bff;
+    }
+
+    #targetPercentage,
+    #target,
+    #targetMonth,
+    #targetPercentage2,
+    #target2,
+    #targetMonth2 {
+        font-weight: 400;
+    }
