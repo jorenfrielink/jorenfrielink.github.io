@@ -3,46 +3,36 @@
 <head>
     <title>City Card activaties</title>
     <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+        }
+      }
+    </script>
+    <script type="module">
+        import { createApp } from 'vue'
+      import Label from './label.vue'
 
+
+      export default {
+      components: {
+        Label
+      }
+    }
+      createApp({
+        data() {
+          return {
+            message: 'Hello Vue!'
+          }
+        }
+      }).mount('#app')
+    </script>
 </head>
 
 <body>
-    <div class="label">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.6 50.9">
-            <style type="text/css">
-            .st0 {
-                fill: #FD000D;
-            }
-
-            .st1 {
-                fill: #FFFFFF;
-            }
-            </style>
-            <rect y="0" class="st0" width="178.6" height="50.9"></rect>
-            <path class="st1" d="M20.3,32.6h-1.4V18.3h1.4v-2.2h-7v2.2h1.5v14.3h-1.5v2.2h7V32.6z M38.3,30c0,1.6-1.4,2.4-3,2.4
-  c-0.9,0-1.9-0.4-1.9-1.4c0-1.7,2.7-1.8,3.9-1.8h1V30z M48,34.8v-6.3c0-1.6,0.3-3.2,2.4-3.2c1.8,0,1.8,1.9,1.8,2.9v6.7H56v-6.7
-  c0-1.6,0.6-2.9,2.4-2.9c1.3,0,1.7,1,1.7,2.2v7.4H64v-7.5c0-3.1-1-5.5-4.5-5.5c-1.9,0-3.1,0.7-4,2.3c-0.7-1.5-2.1-2.3-3.9-2.3
-  c-1.9,0-3.2,1-3.7,2h-0.1v-1.7h-3.8v10.5h-2.2v-4.3c0-4.2-1.2-6.6-5.8-6.6c-2.1,0-4.2,0.7-5.6,2l2.1,2.1c0.8-0.9,1.9-1.5,3.2-1.5
-  c1.4,0,2.5,0.9,2.5,2.3c-3.3,0-8.6,0.1-8.6,4.5c0,2.6,2.1,3.9,4.5,3.9c1.6,0,3.2-0.5,4-1.9h0.1v1.6H48z"></path>
-            <path d="M167.3,32.2h0.3c0.2,0,0.4,0,0.4-0.3c0-0.3-0.2-0.3-0.4-0.3h-0.3V32.2z M166.6,31.1h0.9c0.3,0,1.1,0,1.1,0.8
-  c0,0.5-0.3,0.7-0.6,0.7l0.7,1H168l-0.6-1h-0.1v1h-0.7V31.1z M167.5,34.3c1,0,1.8-0.8,1.8-1.9c0-1-0.8-1.9-1.8-1.9
-  c-1,0-1.8,0.8-1.8,1.9C165.8,33.5,166.5,34.3,167.5,34.3 M167.5,30c1.3,0,2.4,1.1,2.4,2.4c0,1.3-1.1,2.4-2.4,2.4s-2.4-1.1-2.4-2.4
-  C165.1,31.1,166.2,30,167.5,30 M120.6,25.2c-2,0-3.1,1.3-3.1,3.2c0,1.9,1.2,3.2,3.1,3.2c2,0,3.1-1.3,3.1-3.2
-  C123.8,26.5,122.6,25.2,120.6,25.2 M136.9,29.2c-1.2,0-3.9,0.1-3.9,1.8c0,0.9,1,1.4,1.9,1.4c1.5,0,3-0.8,3-2.4v-0.8H136.9z
-   M143.7,22.1h3.8v1.7h0.1c0.5-1,1.8-2,3.7-2c1.8,0,3.2,0.7,3.9,2.3c0.9-1.6,2.1-2.3,4-2.3c3.4,0,4.5,2.4,4.5,5.5v7.5h-3.9v-7.4
-  c0-1.2-0.4-2.2-1.7-2.2c-1.8,0-2.4,1.3-2.4,2.9v6.7h-3.9v-6.7c0-0.9,0.1-2.9-1.8-2.9c-2,0-2.4,1.6-2.4,3.2v6.3h-3.9V22.1z
-   M137.9,33.2L137.9,33.2c-0.9,1.4-2.5,1.9-4.1,1.9c-2.4,0-4.5-1.4-4.5-3.9c0-4.4,5.3-4.5,8.6-4.5c0-1.4-1.2-2.3-2.5-2.3
-  c-1.3,0-2.4,0.6-3.2,1.5l-2.1-2.1c1.4-1.4,3.5-2,5.6-2c4.6,0,5.8,2.3,5.8,6.6v6.5h-3.6V33.2z M127.4,34.8h-3.6v-1.7h0
-  c-0.6,0.9-2.1,2-3.9,2c-3.8,0-6.2-2.7-6.2-6.6c0-3.5,2.2-6.8,5.8-6.8c1.6,0,3.1,0.4,4,1.7h0.1V15h3.9V34.8z M104.1,22.1h3.9v2h0.1
-  c0.8-1.5,1.9-2.4,3.7-2.4c0.4,0,0.9,0,1.3,0.1v3.6c-0.5-0.2-1.1-0.3-1.7-0.3c-3,0-3.3,1.7-3.3,4.3v5.3h-3.9V22.1z M98,27
-  c0-1.3-1-2.4-2.4-2.4c-1.7,0-2.7,1.2-2.8,2.4H98z M87.3,25.2h-3.5v4.2c0,1.4,0.2,2.4,1.9,2.4c0.4,0,1.3-0.1,1.6-0.4v3.3
-  c-0.9,0.3-1.8,0.4-2.7,0.4c-2.6,0-4.6-1.1-4.6-3.8v-6h-2.5v-3.1h2.5v-3.8h3.9v3.8h3.5V25.2z M73.8,25.8c-0.6-0.7-1.3-1.1-2.3-1.1
-  c-0.7,0-1.4,0.3-1.4,1c0,1.9,6.6,0.3,6.6,5.1c0,3.2-3.1,4.2-5.9,4.2c-1.8,0-3.7-0.4-5-1.7l2.4-2.6c0.7,0.9,1.6,1.4,2.8,1.4
-  c0.9,0,1.8-0.2,1.8-0.9c0-2-6.6-0.3-6.6-5.2c0-3,2.7-4.3,5.3-4.3c1.7,0,3.5,0.4,4.7,1.7L73.8,25.8z M101.3,32.6
-  c-1.3,1.6-3.3,2.5-5.4,2.5c-3.9,0-7.1-2.6-7.1-6.7c0-4.1,3.1-6.7,7.1-6.7c3.7,0,6,2.6,6,6.7v1.2h-9.1c0.3,1.5,1.4,2.5,3,2.5
-  c1.3,0,2.1-0.7,2.8-1.5L101.3,32.6z"></path>
-        </svg>
-    </div>
+    <div id="app">{{ message }}</div>
+    <Label />
     <div class="wrap" id="progress-circle">
         <div class="content">
             City Card activaties deze maand:
@@ -88,17 +78,17 @@
         if (angle >= 360) {
             angle = 360;
         };
-        
+
         document.getElementById("counter2").innerHTML = new Intl.NumberFormat('nl-NL').format(done);
         document.getElementById("target2").innerHTML = new Intl.NumberFormat('nl-NL').format(target);
         document.getElementById("targetPercentage2").innerHTML = Number.parseFloat(percentage).toFixed(2) + '%';
 
         let bg = `background:radial-gradient(white 66%, transparent 51%),
-            conic-gradient(transparent 0deg `+angle+`deg, #f7f7f7 `+angle+`deg 360deg),
+            conic-gradient(transparent 0deg ` + angle + `deg, #f7f7f7 ` + angle + `deg 360deg),
             conic-gradient(rgb(0, 123, 255,0.3) 0deg, #007bff);`
 
         document.getElementById("progress-circle2").style = bg;
- 
+
     }
 
     function getCityCardCounter() {
@@ -125,7 +115,7 @@
         });
 
         const d = new Date().getMonth();
-        const prevD = new Date().getMonth()-1;
+        const prevD = new Date().getMonth() - 1;
 
         var curActivations = activations - target[prevD].sumActivations;
 
@@ -145,14 +135,12 @@
 
 
         let bg = `background:radial-gradient(white 66%, transparent 51%),
-            conic-gradient(transparent 0deg `+angle+`deg, #f7f7f7 `+angle+`deg 360deg),
+            conic-gradient(transparent 0deg ` + angle + `deg, #f7f7f7 ` + angle + `deg 360deg),
             conic-gradient(rgb(24, 175, 117,0.3) 0deg, #18af75);`
 
         document.getElementById("progress-circle").style = bg;
 
     }
-
-    
     </script>
 </body>
 
