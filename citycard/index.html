@@ -51,21 +51,21 @@
             <div>Totale activaties dit jaar: <span id="targetSum"></span></div>
         </div>
     </div>
-    <div class="wrap2" id="progress-circle2">
+<!--     <div class="wrap2" id="progress-circle2">
         <div class="content">
             CMS project
             <div id="counter2"></div>
             <div>van de <span id="target2"></span> (<span id="targetPercentage2"></span>)<br>artikelen gemigreerd</div>
         </div>
-    </div>
+    </div> -->
     <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
     <script>
     $(document).ready(function() {
-        getCityCardCounter();
+        // getCityCardCounter();
         getMigrationCounter();
     });
 
-    setInterval(getCityCardCounter, 60000)
+    // setInterval(getCityCardCounter, 60000)
     setInterval(getMigrationCounter, 600000)
 
     function getMigrationCounter() {

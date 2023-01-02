@@ -27,8 +27,8 @@
     }
 
     .wrap, .wrap2 {
-        float:  left;
-        margin: 200px 100px;
+        float:  none;
+        margin: 100px auto;
         text-align: center;
     }
 
