@@ -61,45 +61,45 @@
     <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
     <script>
     $(document).ready(function() {
-        getCityCardCounter();
-        // getMigrationCounter();
+        // getCityCardCounter();
+        getMigrationCounter();
     });
 
-    setInterval(getCityCardCounter, 60000)
-    // setInterval(getMigrationCounter, 600000)
+    // setInterval(getCityCardCounter, 60000)
+    setInterval(getMigrationCounter, 600000)
 
-    // function getMigrationCounter() {
-    //     var articles = [];
-    //     $.ajax({
-    //         url: 'https://jorenfrielink.github.io/citycard/articles.json',
-    //         async: false,
-    //         cache: false,
-    //         dataType: 'json',
-    //         success: function(json) {
-    //             articles = json.articles;
-    //         }
-    //     });
+    function getMigrationCounter() {
+        var articles = [];
+        $.ajax({
+            url: 'https://jorenfrielink.github.io/citycard/articles.json',
+            async: false,
+            cache: false,
+            dataType: 'json',
+            success: function(json) {
+                articles = json.articles;
+            }
+        });
 
-    //     var done = articles[0].number;
-    //     var target = articles[0].target;
-    //     var percentageInt = done / target
-    //     var percentage = percentageInt * 100;
-    //     var angle = 360 * percentageInt;
-    //     if (angle >= 360) {
-    //         angle = 360;
-    //     };
+        var done = articles[0].number;
+        var target = articles[0].target;
+        var percentageInt = done / target
+        var percentage = percentageInt * 100;
+        var angle = 360 * percentageInt;
+        if (angle >= 360) {
+            angle = 360;
+        };
         
-    //     document.getElementById("counter2").innerHTML = new Intl.NumberFormat('nl-NL').format(done);
-    //     document.getElementById("target2").innerHTML = new Intl.NumberFormat('nl-NL').format(target);
-    //     document.getElementById("targetPercentage2").innerHTML = Number.parseFloat(percentage).toFixed(2) + '%';
+        document.getElementById("counter2").innerHTML = new Intl.NumberFormat('nl-NL').format(done);
+        document.getElementById("target2").innerHTML = new Intl.NumberFormat('nl-NL').format(target);
+        document.getElementById("targetPercentage2").innerHTML = Number.parseFloat(percentage).toFixed(2) + '%';
 
-    //     let bg = `background:radial-gradient(white 66%, transparent 51%),
-    //         conic-gradient(transparent 0deg `+angle+`deg, #f7f7f7 `+angle+`deg 360deg),
-    //         conic-gradient(rgb(0, 123, 255,0.3) 0deg, #007bff);`
+        let bg = `background:radial-gradient(white 66%, transparent 51%),
+            conic-gradient(transparent 0deg `+angle+`deg, #f7f7f7 `+angle+`deg 360deg),
+            conic-gradient(rgb(0, 123, 255,0.3) 0deg, #007bff);`
 
-    //     document.getElementById("progress-circle2").style = bg;
+        document.getElementById("progress-circle2").style = bg;
  
-    // }
+    }
 
     function getCityCardCounter() {
         var activations = [];
@@ -126,15 +126,8 @@
 
         const d = new Date().getMonth();
         const prevD = new Date().getMonth()-1;
-        const sumActivations = 0;
-        
-        if (d == 0 ) {
-            const sumActivations = 0;
-        } else {
-            const sumActivations = target[prevD].sumActivations;
-        }
 
-        var curActivations = activations - sumActivations;
+        var curActivations = activations - target[prevD].sumActivations;
 
 
 
