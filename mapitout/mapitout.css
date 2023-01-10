@@ -30,7 +30,7 @@ svg:not(:root) {
 
 
 html {
-    font-family: Avenir, sans-serif;
+    font-family: AmsterdamSans,sans-serif;
     font-size: 17px;
     line-height: 1.6;
     -ms-text-size-adjust: 100%;
@@ -111,7 +111,7 @@ html {
 
 @media(min-width:768px) {
     .container {
-        max-width: 740px
+        max-width: 100%
     }
 }
 
@@ -2004,7 +2004,7 @@ html {
       transform: scale(1); } }
 
 .map__text {
-  font-family: 'Avenir', sans-serif;
+  font-family: AmsterdamSans,sans-serif;
   font-weight: 900;
   font-size: 46px; }
 
@@ -2013,7 +2013,7 @@ html {
 
 .map__text__city {
   font-size: 16px;
-  font-family: 'Avenir', sans-serif;
+  font-family: AmsterdamSans,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   fill: black;
@@ -2039,13 +2039,13 @@ html {
 
 .map__text__water {
   font-size: 24px;
-  font-family: 'Avenir', sans-serif;
+  font-family: AmsterdamSans,sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   fill: #ffffff; }
 
 .amsterdam__text {
-  font-family: 'Avenir', sans-serif;
+  font-family: AmsterdamSans,sans-serif;
   font-size: 28px;
   font-weight: 700;
   fill: black;
