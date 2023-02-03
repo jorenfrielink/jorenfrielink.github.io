@@ -125,13 +125,12 @@
 
         const d = new Date().getMonth();
         const prevD = new Date().getMonth() - 1;
-        console.log(d);
-        const sumActivations = 0;
+        var sumActivations = 0;
 
         if (d == 0) {
-            const sumActivations = 0;
+            sumActivations = 0;
         } else {
-            const sumActivations = target[prevD].sumActivations;
+            sumActivations = target[prevD].sumActivations;
         }
 
 
