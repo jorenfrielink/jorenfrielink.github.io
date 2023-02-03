@@ -2,56 +2,59 @@
         "month": "januari",
         "target": 6860,
         "sumTarget": 6860,
-        "sumActivations": 0
+        "sumActivations": 9689
     }, {
         "month": "februari",
-        "target": 3000,
-        "sumTarget": 4000
+        "target": 7980,
+        "sumTarget": 14840,
+        "sumActivations": 0
     }, {
         "month": "maart",
-        "target": 7000,
-        "sumTarget": 11000
+        "target": 11480,
+        "sumTarget": 26320,
+        "sumActivations": 0
     }, {
         "month": "april",
-        "target": 13000,
-        "sumTarget": 24000
+        "target": 14560,
+        "sumTarget": 40880,
+        "sumActivations": 0
     }, {
         "month": "mei",
-        "target": 11875,
-        "sumTarget": 35875,
-        "sumActivations": 37728
+        "target": 13300,
+        "sumTarget": 54180,
+        "sumActivations": 0
     }, {
         "month": "juni",
-        "target": 10750,
-        "sumTarget": 46625,
-        "sumActivations": 47762
+        "target": 12040,
+        "sumTarget": 66220,
+        "sumActivations": 0
     }, {
         "month": "juli",
-        "target": 12375,
-        "sumTarget": 59000,
-        "sumActivations": 57890
+        "target": 13860,
+        "sumTarget": 80080,
+        "sumActivations": 0
     }, {
         "month": "augustus",
-        "target": 14875,
-        "sumTarget": 73875,
-        "sumActivations": 71278
+        "target": 16660,
+        "sumTarget": 96740,
+        "sumActivations": 0
     }, {
         "month": "september",
-        "target": 10875,
-        "sumTarget": 84750,
-        "sumActivations": 80462
+        "target": 12180,
+        "sumTarget": 108920,
+        "sumActivations": 0
     }, {
         "month": "oktober",
-        "target": 10875,
-        "sumTarget": 95625,
-        "sumActivations": 90352
+        "target": 12180,
+        "sumTarget": 121100,
+        "sumActivations": 0
     }, {
         "month": "november",
-        "target": 8000,
-        "sumTarget": 103625,
-        "sumActivations": 97546
+        "target": 8960,
+        "sumTarget": 130060,
+        "sumActivations": 0
     }, {
         "month": "december",
-        "target": 8875,
-        "sumTarget": 112500
+        "target": 9940,
+        "sumTarget": 140000
     }]}
