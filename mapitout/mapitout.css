@@ -2155,9 +2155,7 @@ html {
   margin-top: 8px;
   margin-bottom: auto;
   padding-left: 0px; }
-  @media (min-width: 768px) and (max-width: 991px) {
-    .living-area__features {
-      font-size: 14px; } }
+
   @media (max-width: 767px) {
     .living-area__features {
       margin-bottom: 16px; } }
@@ -2281,50 +2279,9 @@ html {
   display: inline-block;
   font-size: 17px; }
 
-.traits.nature::before {
-  content: "\e908"; }
+.traits::before {
+  content: "→"; }
 
-.traits.kids::before {
-  content: "\e617"; }
-
-.traits.housing::before {
-  content: "\e910"; }
-
-.traits.career::before {
-  content: "\e90a"; }
-
-.traits.culture::before {
-  content: "\e909"; }
-
-.traits.location::before {
-  content: "\e91c"; }
-
-.traits.shopping::before {
-  content: "\e60f"; }
-
-.traits.dreams::before {
-  content: "\e913"; }
-
-.traits.transport::before {
-  content: "\e918"; }
-
-.traits.history::before {
-  content: "\e619"; }
-
-.traits.nightlife::before {
-  content: "\e61a"; }
-
-.traits.international::before {
-  content: "\e613"; }
-
-.traits.business::before {
-  content: "\e90e"; }
-
-.traits.party::before {
-  content: "\e616"; }
-
-.traits.active::before {
-  content: "\e922"; }
 
 /* Image gallery */
 .living-gallery__main {
