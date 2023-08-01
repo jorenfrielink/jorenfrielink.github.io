@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Preview Popup</title>
+</head>
+<body>
+  <a href="https://google.com" class="link-preview">Hover over me to see the preview</a>
+
+  <div class="popup" id="previewPopup"></div>
+
+
+  <script type="text/javascript">
+  	document.addEventListener('DOMContentLoaded', function () {
+  const linkPreview = document.querySelector('.link-preview');
+  const popup = document.getElementById('previewPopup');
+
+  let timeoutId;
+
+  linkPreview.addEventListener('mouseover', function (event) {
+    const linkUrl = event.target.getAttribute('href');
+    if (linkUrl) {
+      clearTimeout(timeoutId); // Clear any previous timeout
+      timeoutId = setTimeout(() => fetchPreview(linkUrl), 500); // Fetch preview after 500ms delay
+    }
+  });
+
+  linkPreview.addEventListener('mouseout', function () {
+    clearTimeout(timeoutId);
+    popup.style.display = 'none';
+  });
+
+  document.addEventListener('mousemove', function (event) {
+    positionPopup(event);
+  });
+
+  function fetchPreview(linkUrl) {
+    fetch(linkUrl)
+      .then(response => response.text())
+      .then(data => {
+        popup.innerHTML = data;
+        popup.style.display = 'block';
+        positionPopup(event);
+      })
+      .catch(error => {
+        console.error('Error fetching preview:', error);
+      });
+  }
+
+  function positionPopup(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+    const offset = 10;
+    popup.style.left = x + offset + 'px';
+    popup.style.top = y + offset + 'px';
+  }
+});
+
+  </script>
+</body>
+</html>
