@@ -1,42 +1,42 @@
 <html>
 
-  <head>
+<head>
     <title>CHAT PAGE</title>
     <!--    <meta name="viewport" content="width=device-width, initial-scale=1,
     imum-scale=1, maximum-scale=1, user-scalable=0"> -->
-  </head>
+</head>
 
-  <body>
+<body>
     <style type='text/css'>
-      .embeddedServiceHelpButton .helpButton .uiButton {
+    .embeddedServiceHelpButton .helpButton .uiButton {
         background-color: #005290;
         font-family: "Arial", sans-serif;
-      }
+    }
 
     .embeddedServiceHelpButton .helpButton .uiButton:focus {
-      outline: 1px solid #005290;
+        outline: 1px solid #005290;
     }
     </style>
-
     <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.js'></script>
     <script type='text/javascript'>
-      // On page load set the correct size of the iframe to account for either CWAE/Contact Us or Session Continuity.
-      function helpButtonLoaded() {
+    // On page load set the correct size of the iframe to account for either CWAE/Contact Us or Session Continuity.
+    function helpButtonLoaded() {
         var helpButton = document.querySelector('.helpButton');
         if (!helpButton) {
-          window.setTimeout(helpButtonLoaded, 500);
-          return;
+            window.setTimeout(helpButtonLoaded, 500);
+            return;
         }
         var height = helpButton.clientHeight;
         var width = helpButton.clientWidth;
         window.parent.postMessage({
-                                  frameHeight: height,
-                                  frameWidth: width
-                                  }, '*'); // Used a * but for security reasons you can plug in the domain name.
-      }
-      window.onload = helpButtonLoaded();
+            frameHeight: height,
+            frameWidth: width
+        }, '*'); // Used a * but for security reasons you can plug in the domain name.
+    }
+    window.onload = helpButtonLoaded();
 
-      var initESW = function(gslbBaseURL) {
+    var initESW = function(gslbBaseURL) {
+
         embedded_svc.settings.displayHelpButton = true; // Or false
         embedded_svc.settings.language = 'en-US'; // For example, enter 'en' or 'en-US'
         embedded_svc.settings.devMode = true;
@@ -46,61 +46,61 @@
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         embedded_svc.settings.entryFeature = 'LiveAgent';
         embedded_svc.init(
-          'http://localhost.internal.salesforce.com:6109',
-          'http://localhost.force.com:6109/test1',
-          gslbBaseURL,
-          '00Dxx0000001gEW',
-          'omni_1', {
-            baseLiveAgentContentURL: 'path/to/baseLiveAgentContentURL',
-            deploymentId: '572xx0000000001',
-            buttonId: '573xx0000000001',
-            baseLiveAgentURL: 'path/to/baseLiveAgentURL',
-            eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04IRM0000004Dv12AE_16c4e028e49',
-            isOfflineSupportEnabled: true
-          }
+            'https://iamsterdam.my.salesforce.com',
+            'https://iam.iamsterdam.com/',
+            gslbBaseURL,
+            '00D1t000000ugX1',
+            'Chat', {
+                baseLiveAgentContentURL: 'https://c.la1-core1.sfdc-urlt2q.salesforceliveagent.com/content',
+                deploymentId: '572AX0000000034',
+                buttonId: '573AX000000001m',
+                baseLiveAgentURL: 'https://d.la1-core1.sfdc-urlt2q.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04IAX000000000k2AA_183a256f6cb',
+                isOfflineSupportEnabled: false
+            }
         );
 
         embedded_svc.addEventHandler("afterMinimize", function() {
-          var sidebar = document.querySelector('.embeddedServiceSidebarMinimizedDefaultUI');
-          var height = sidebar.clientHeight;
-          var width = sidebar.clientWidth;
-          window.parent.postMessage({
-            frameHeight: height,
-            frameWidth: width
-           }, '*');
+            var sidebar = document.querySelector('.embeddedServiceSidebarMinimizedDefaultUI');
+            var height = sidebar.clientHeight;
+            var width = sidebar.clientWidth;
+            window.parent.postMessage({
+                frameHeight: height,
+                frameWidth: width
+            }, '*');
         });
 
         embedded_svc.addEventHandler("afterMaximize", function() {
-          var container = document.querySelector('.dockableContainer');
-          var height = container.clientHeight;
-          var width = container.clientWidth;
-          window.parent.postMessage({
-            frameHeight: embedded_svc.settings.widgetHeight,
-            frameWidth: embedded_svc.settings.widgetWidth
-          }, '*');
+            var container = document.querySelector('.dockableContainer');
+            var height = container.clientHeight;
+            var width = container.clientWidth;
+            window.parent.postMessage({
+                frameHeight: embedded_svc.settings.widgetHeight,
+                frameWidth: embedded_svc.settings.widgetWidth
+            }, '*');
         });
 
         embedded_svc.addEventHandler("afterDestroy", function() {
-          var height = document.querySelector('.helpButton').clientHeight;
-          var width = document.querySelector('.helpButton').clientWidth;
-          window.parent.postMessage({
-            frameHeight: height,
-            frameWidth: width
-          }, '*');
+            var height = document.querySelector('.helpButton').clientHeight;
+            var width = document.querySelector('.helpButton').clientWidth;
+            window.parent.postMessage({
+                frameHeight: height,
+                frameWidth: width
+            }, '*');
         });
-      };
+    };
 
-      if (!window.embedded_svc) {
+    if (!window.embedded_svc) {
         var s = document.createElement('script');
         s.setAttribute('src', 'https://iamsterdam.my.salesforce.com/embeddedservice/5.0/esw.js');
         s.onload = function() {
-          initESW(null);
+            initESW(null);
         };
         document.body.appendChild(s);
-      } else {
+    } else {
         initESW('https://service.force.com');
-      }
-
+    }
     </script>
-  </body>
+</body>
+
 </html>
