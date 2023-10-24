@@ -114,12 +114,12 @@
 
         var target = [];
         $.ajax({
-            url: 'https://jorenfrielink.github.io/citycard/data.json',
+            url: 'https://opensheet.elk.sh/1JLgnB66xE7zAdTOd-P48gpIZxuMJasXeCxNFwFqQxEM/data',
             async: false,
             cache: false,
             dataType: 'json',
             success: function(json) {
-                target = json.target;
+                target = json;
             }
         });
 

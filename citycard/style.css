@@ -2,14 +2,14 @@
         font-family: Avenir;
         font-style: normal;
         font-weight: 400;
-        src: url('https://www.iamsterdam.com/Assets/fonts/avenir/Book.eot?v=E0F4988F3257EC6DEA10ADD7B786C656') format("eot"), url('https://www.iamsterdam.com/Assets/fonts/avenir/Book.woff') format("woff"), url('https://www.iamsterdam.com/Assets/fonts/avenir/Book.ttf') format("truetype"), url('https://www.iamsterdam.com/Assets/fonts/avenir/Book.svg') format("svg")
+        src: url('static/eot/AmsterdamSans-Regular.eot') format("eot"), url('static/woff/AmsterdamSans-Regular.woff') format("woff"), url('static/woff2/AmsterdamSans-Regular.woff2') format("woff2")
     }
 
     @font-face {
         font-family: Avenir;
         font-style: normal;
         font-weight: 800;
-        src: url('https://www.iamsterdam.com//Assets/fonts/avenir/Heavy.eot?'') format("eot"), url(https://www.iamsterdam.com//Assets/fonts/avenir/Heavy.woff') format("woff"), url('https://www.iamsterdam.com//Assets/fonts/avenir/Heavy.ttf') format("truetype"), url('https://www.iamsterdam.com//Assets/fonts/avenir/Heavy.svg') format("svg")
+        src: url('static/eot/AmsterdamSans-Bold.eot') format("eot"), url('static/woff/AmsterdamSans-Bold.woff') format("woff"), url('static/woff2/AmsterdamSans-Bold.woff2') format("woff2")
     }
 
     html,
